@@ -4,14 +4,14 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
 
 //定义一个testSass任务（自定义任务名称）
 gulp.task('sass', function() {
-    gulp.src('src/sass/*.scss') //该任务针对的文件
+    gulp.src('app/sass/*.scss') //该任务针对的文件
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) //该任务调用的模块
-        .pipe(gulp.dest('src/dist/css')); //将会在src/css下生成index.css
+        .pipe(gulp.dest('app/dist/css')); //将会在src/css下生成index.css
 });
 
 
 gulp.task('watch', function() {
-        gulp.watch('src/sass/*.scss', ['sass']);
+        gulp.watch('app/sass/*.scss', ['sass']);
     }) //sass监听  自动编译
 
 gulp.task('default', ['sass']); //定义默认任务 elseTask为其他任务，该示例没有定义elseTask任务
