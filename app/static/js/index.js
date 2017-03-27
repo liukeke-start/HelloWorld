@@ -1,14 +1,13 @@
-var t = $('#item');
+var t = $('p');
 
 
 
-alert(t);
+// alert(t);
 console.log(t);
 
 
 
-
-
-$('#item').click(function() {
+$('p').click(function() {
+    $('p').css("background-color", "#000");
     alert(t);
 });
